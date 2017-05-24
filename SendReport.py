@@ -18,12 +18,11 @@ class Report:
         subject=u'Lunkr4Web自动化测试日常报告'+'('+sendtime+')'
         msg = MIMEText(mail_body, 'html', 'utf-8')
         msg['Subject'] = Header(subject, 'utf-8')
-        msg['From'] = 'ceshi@coremail.cn'#发件地址
-        #msg['To'] = 'wqzhou@coremail.cn,kfhuang@coremail.cn,jianli@coremail.cn,mlma@coremail.cn,dbzhong@coremail.cn,yxzhan@coremail.cn,jlwu@coremail.cn,cgyu@coremail.cn,cyt@coremail.cn,lwr@coremail.cn,lzhong@coremail.cn'#收件人地址，多人以分号分隔
-        msg['To'] = 'wqzhou@coremail.cn,kfhuang@coremail.cn,mlma@coremail.cn,bqiu@coremail.cn'#收件人地址，多人以分号分隔
-        smtp = smtplib.SMTP('smtp.coremail.cn')
+        msg['From'] = 'ceshi'#发件地址
+        msg['To'] = 'wqzhou@'#收件人地址，多人以分号分隔
+        smtp = smtplib.SMTP('smtp.163.cn')
         #smtp.set_debuglevel(1)#debug模式日志
-        smtp.login('ceshi@coremail.cn', 'coremail+2016')#登录邮箱的账户和密码
+        smtp.login('')#登录邮箱的账户和密码
         smtp.sendmail(msg['From'], msg['To'].split(','), msg.as_string())
         smtp.quit()
         print('test report has send out!')

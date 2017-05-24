@@ -42,8 +42,7 @@ class HtmlReport:
         return htmllist
 
 if __name__=='__main__':
-    #req=urllib2.Request("http://lunkrauto01.rd.mt:1234/job/Lunkr4WebAuto/282/buildNumber")
-    req=urllib2.Request("http://jenkins.rd.mt:1234/job/Lunkr4WebAuto/lastBuild/buildNumber")
+      req=urllib2.Request("")
     response=urllib2.urlopen(req)
     abc=json.load(response)
     buildtime=str(abc)
