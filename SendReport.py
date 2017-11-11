@@ -15,7 +15,7 @@ class Report:
         :rtype: object
         """
         sendtime=time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
-        subject=u'Lunkr4Web自动化测试日常报告'+'('+sendtime+')'
+        subject=u'自动化测试日常报告'+'('+sendtime+')'
         msg = MIMEText(mail_body, 'html', 'utf-8')
         msg['Subject'] = Header(subject, 'utf-8')
         msg['From'] = 'ceshi'#发件地址
