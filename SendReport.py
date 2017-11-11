@@ -18,8 +18,8 @@ class Report:
         subject=u'自动化测试日常报告'+'('+sendtime+')'
         msg = MIMEText(mail_body, 'html', 'utf-8')
         msg['Subject'] = Header(subject, 'utf-8')
-        msg['From'] = 'ceshi'#发件地址
-        msg['To'] = 'wqzhou@'#收件人地址，多人以分号分隔
+        msg['From'] = ''#发件地址
+        msg['To'] = ''#收件人地址，多人以分号分隔
         smtp = smtplib.SMTP('smtp.163.cn')
         #smtp.set_debuglevel(1)#debug模式日志
         smtp.login('')#登录邮箱的账户和密码
