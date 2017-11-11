@@ -26,7 +26,7 @@ class VersionsInfo:
         verlist=[]
         sshd = self.ssh_connect( '', 'root','' )
         #sshd = self.ssh_connect( '', 'root', '' )
-        stdin, stdout, stderr = self.ssh_exec_cmd( sshd, 'cat /home/coremail/versions.txt' )
+        stdin, stdout, stderr = self.ssh_exec_cmd( sshd, 'cat /home/versions.txt' )
         err_list = stderr.readlines()
         if len( err_list ) > 0:
             print 'ERROR:' + err_list[0]
